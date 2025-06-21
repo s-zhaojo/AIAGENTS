@@ -7,8 +7,12 @@ import io
 from bs4 import BeautifulSoup
 import requests 
 
-#Hello
+from dotenv import load_dotenv
+import os
 import openai
+
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 app = FastAPI()
 # connect to frontend
@@ -53,5 +57,24 @@ async def extract_link(data: dict):
             "title": title,
             "summary": summary
         }
+    except Exception as e:
+        return {"error": str(e)}
+
+#GPT Code Type Stuff
+
+@app.post("/chat")
+async def chat_with_gpt(data: dict):
+    prompt = data.get("prompt", "")
+    if not prompt:
+        return {"error": "No prompt provided"}
+
+    try:
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo"
+            messages=[
+                {"role": "user", "content": prompt}
+            ]
+        )
+        return {"response": response.choices[0].message["content"]}
     except Exception as e:
         return {"error": str(e)}
