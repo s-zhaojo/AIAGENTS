@@ -29,7 +29,11 @@ async def add_task():
 def delete_task(task_id: str):
     return store.delete_task(task_id)
 
+<<<<<<< HEAD
+@app.post("/extract"):
+=======
 @app.post("/extract")
+>>>>>>> eccf857be1d18f7320db84bacc435fffdef51ed6
 async def extact_file(file: UploadFile = File(...)):
     image_bytes = await file.read()
     image = Image.open(io.BytesIO(image_bytes))
