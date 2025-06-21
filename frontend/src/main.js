@@ -16,14 +16,6 @@ document.querySelector('#app').innerHTML = `
         <input type="submit">
       </form>
     </div>
-    <div class="dropdown">
-      <button class="dropbtn">Dropdown</button>
-      <div class="dropdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
-    </div>
 
     <!-- OpenAI Q&A Section -->
     <div class="qa-section" style="margin-top: 2em;">
