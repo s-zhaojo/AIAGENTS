@@ -3,22 +3,30 @@ import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
 
+
+
 document.querySelector('#app').innerHTML = `
   <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
       <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
     </a>
-    <h1>Hello Vite!</h1>
+    <h1>MoodText</h1>
     <div class="card">
-      <button id="counter" type="button"></button>
+<form action="/action_page.php">
+  <input type="file" id="myFile" name="filename">
+  <input type="submit">
+</form>
     </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
+    <div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+  <a href="#">Link 1</a>
+  <a href="#">Link 2</a>
+  <a href="#">Link 3</a>
   </div>
+  </div>
+  </div>
+  
 `
 
 setupCounter(document.querySelector('#counter'))
