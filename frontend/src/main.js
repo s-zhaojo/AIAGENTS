@@ -43,7 +43,7 @@ import('https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js').then(() => {
   const resultElement = document.getElementById('result');
 
   async function fetchCompletion(userMessage) {
-    const apiKey = ''; // 🔐 Do NOT expose this in production!
+    const apiKey = ''; // 
     const url = 'https://api.openai.com/v1/chat/completions';
     const headers = {
       'Authorization': `Bearer ${apiKey}`,  
