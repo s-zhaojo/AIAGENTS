@@ -28,9 +28,9 @@ def root():
     return  {"message": "backend is running!"}
 
 @app.get("/tasks")
-async def add_task():
-    data = await request.json()
-    return store.add_task(data)
+# async def add_task():
+#     data = await request.json()
+#     return store.add_task(data)
 
 @app.delete("/tasks/{task_id}")
 def delete_task(task_id: str):
@@ -70,7 +70,7 @@ async def chat_with_gpt(data: dict):
 
     try:
         response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo"
+            model="gpt-3.5-turbo",
             messages=[
                 {"role": "user", "content": prompt}
             ]
