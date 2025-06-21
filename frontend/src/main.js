@@ -43,10 +43,10 @@ import('https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js').then(() => {
   const resultElement = document.getElementById('result');
 
   async function fetchCompletion(userMessage) {
-    const apiKey = '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'; // 🔐 Do NOT expose this in production!
+    const apiKey = ''
     const url = 'https://api.openai.com/v1/chat/completions';
     const headers = {
-      'Authorization': `Bearer ${apiKey}`,
+      'Authorization': `Bearer ${apiKey}`,  
       'Content-Type': 'application/json'
     };
     const data = {
