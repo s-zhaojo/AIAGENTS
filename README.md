@@ -7,7 +7,7 @@
 
 EmoteMind helps people act on goals when their mind is ready, not on a fixed-time deadline.  
 Inspired by state-dependent recall in psychology and cognition, the AI agent stores intentions with an associated emotional tag (confident / focused / inspired / calm).  
-When users later describe their current state, EmoteMind resurfaces the most related intentions and nudges them to act, breaking the cycle of forgetting their original intention from when they weren't ready.
+When users later describe their current state, EmoteMind returns the most related intentions and nudges them to act, breaking the cycle of forgetting their original intention from when they weren't ready.
 
 ---
 
@@ -26,9 +26,10 @@ When users later describe their current state, EmoteMind resurfaces the most rel
 > 4. Acts by generating a motivational message 
 
 ---
-## 🏗️ Architecture
+## Architecture
+> 1. React Vite (HTML/JS)
+> 2. Gemini API?
 
-```mermaid
 graph TD
   A[User types intention] -->|Gemini parse| B{Intent JSON}
   B --> C[Memory Store (localStorage)]
