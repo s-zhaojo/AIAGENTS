@@ -7,6 +7,9 @@ import io
 from bs4 import BeautifulSoup
 import requests 
 
+#Hello
+import openai
+
 app = FastAPI()
 # connect to frontend
 app.add_middleware(
